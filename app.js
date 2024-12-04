@@ -13,6 +13,11 @@ btn.addEventListener("click",async ()=>{
             prompt:prmpt
         }),
     })
-    const data = await response.text();
-    p.innerText=data;
+    try{
+        const data = await response.text();
+        p.innerText=data;
+    }catch(error)
+    {
+        p.innerText=error;
+    }
 });
